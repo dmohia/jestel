@@ -189,56 +189,108 @@
             <span class="section-label">Maisons & Savoir-faire</span>
             <h2 class="section-title">Un écosystème de maisons complémentaires</h2>
 
-            <div class="maisons-grid">
-                <article class="maison-card">
-                    <div class="maison-image">
-                        <img src="images/DevoirDecourMedia/VALIDEE-Rosewood-Paris-16.webp" alt="Pouyanne 1903" loading="lazy">
-                    </div>
-                    <div class="maison-content">
-                        <h3 class="maison-name">Pouyanne 1903</h3>
-                        <p class="maison-description">Maison des savoir-faire.</p>
-                        <p class="maison-details">Un point d'entrée unique pour orchestrer des métiers d'excellence au service des maisons de luxe, des institutions et des clients privés.</p>
-                        <p class="maison-positioning"><strong>Positionnement :</strong> Coordination, excellence, intégration des expertises.</p>
-                        <a href="#galerie" class="maison-link">Découvrir &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="maison-card">
-                    <div class="maison-image">
-                        <img src="images/DevoirDecourMedia/PicsArt_10-22-07.29.37.webp" alt="DEVOIRDECOURT" loading="lazy">
-                    </div>
-                    <div class="maison-content">
-                        <h3 class="maison-name">DEVOIRDECOURT</h3>
-                        <p class="maison-description">Soin haut de gamme des souliers et du cuir.</p>
-                        <p class="maison-details">Entretien, nettoyage, cirage traditionnel, glaçage, patines, restauration et valorisation.</p>
-                        <p class="maison-positioning"><strong>Positionnement :</strong> Discrétion, exigence, précision du geste, service haut de gamme.</p>
-                        <a href="#galerie" class="maison-link">Découvrir &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="maison-card">
-                    <div class="maison-image">
-                        <img src="images/DevoirDecourMedia/PicsArt_12-08-12.35.40.webp" alt="Pouyanne médecin de la robe" loading="lazy">
-                    </div>
-                    <div class="maison-content">
-                        <h3 class="maison-name">Pouyanne, le médecin de la robe</h3>
-                        <p class="maison-description">Soin et valorisation des textiles et des vêtements.</p>
-                        <p class="maison-details">Diagnostic, détachage, nettoyage spécialisé, traitement des couleurs et conservation.</p>
-                        <p class="maison-positioning"><strong>Positionnement :</strong> Précision technique, mémoire textile, respect de l'intégrité des pièces.</p>
-                        <a href="#galerie" class="maison-link">Découvrir &rarr;</a>
+            <div class="maisons-accordion">
+                <article class="maison-accordion-item active">
+                    <button class="maison-header" aria-expanded="true">
+                        <div class="maison-header-content">
+                            <h3 class="maison-name">Pouyanne 1903</h3>
+                            <p class="maison-tagline">Maison des savoir-faire</p>
+                        </div>
+                        <span class="maison-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="maison-panel">
+                        <div class="maison-panel-inner">
+                            <div class="maison-image">
+                                <img src="images/DevoirDecourMedia/VALIDEE-Rosewood-Paris-16.webp" alt="Pouyanne 1903" loading="lazy">
+                            </div>
+                            <div class="maison-content">
+                                <p class="maison-details">Un point d'entrée unique pour orchestrer des métiers d'excellence au service des maisons de luxe, des institutions et des clients privés.</p>
+                                <p class="maison-positioning"><strong>Positionnement :</strong> Coordination, excellence, intégration des expertises.</p>
+                                <a href="#galerie" class="maison-link">Découvrir les réalisations &rarr;</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
-                <article class="maison-card">
-                    <div class="maison-image">
-                        <img src="images/ChevalierMedia/Chevalier-Conservation-624x700.webp" alt="Chevalier Conservation" loading="lazy">
+                <article class="maison-accordion-item">
+                    <button class="maison-header" aria-expanded="false">
+                        <div class="maison-header-content">
+                            <h3 class="maison-name">DEVOIRDECOURT</h3>
+                            <p class="maison-tagline">Soin haut de gamme des souliers et du cuir</p>
+                        </div>
+                        <span class="maison-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="maison-panel">
+                        <div class="maison-panel-inner">
+                            <div class="maison-image">
+                                <img src="images/DevoirDecourMedia/PicsArt_10-22-07.29.37.webp" alt="DEVOIRDECOURT" loading="lazy">
+                            </div>
+                            <div class="maison-content">
+                                <p class="maison-details">Entretien, nettoyage, cirage traditionnel, glaçage, patines, restauration et valorisation.</p>
+                                <p class="maison-positioning"><strong>Positionnement :</strong> Discrétion, exigence, précision du geste, service haut de gamme.</p>
+                                <a href="#galerie" class="maison-link">Découvrir les réalisations &rarr;</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="maison-content">
-                        <h3 class="maison-name">Chevalier Conservation</h3>
-                        <p class="maison-description">Conservation et restauration de tapis, tapisseries et textiles.</p>
-                        <p class="maison-details">Nettoyage spécialisé, restauration structurelle, retissage, consolidation, expertise et valorisation patrimoniale.</p>
-                        <p class="maison-positioning"><strong>Positionnement :</strong> Artisanat d'art, conservation patrimoniale, exigences muséales.</p>
-                        <a href="#galerie" class="maison-link">Découvrir &rarr;</a>
+                </article>
+
+                <article class="maison-accordion-item">
+                    <button class="maison-header" aria-expanded="false">
+                        <div class="maison-header-content">
+                            <h3 class="maison-name">Pouyanne, le médecin de la robe</h3>
+                            <p class="maison-tagline">Soin et valorisation des textiles</p>
+                        </div>
+                        <span class="maison-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="maison-panel">
+                        <div class="maison-panel-inner">
+                            <div class="maison-image">
+                                <img src="images/DevoirDecourMedia/PicsArt_12-08-12.35.40.webp" alt="Pouyanne médecin de la robe" loading="lazy">
+                            </div>
+                            <div class="maison-content">
+                                <p class="maison-details">Diagnostic, détachage, nettoyage spécialisé, traitement des couleurs et conservation.</p>
+                                <p class="maison-positioning"><strong>Positionnement :</strong> Précision technique, mémoire textile, respect de l'intégrité des pièces.</p>
+                                <a href="#galerie" class="maison-link">Découvrir les réalisations &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="maison-accordion-item">
+                    <button class="maison-header" aria-expanded="false">
+                        <div class="maison-header-content">
+                            <h3 class="maison-name">Chevalier Conservation</h3>
+                            <p class="maison-tagline">Conservation et restauration textile</p>
+                        </div>
+                        <span class="maison-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="maison-panel">
+                        <div class="maison-panel-inner">
+                            <div class="maison-image">
+                                <img src="images/ChevalierMedia/Chevalier-Conservation-624x700.webp" alt="Chevalier Conservation" loading="lazy">
+                            </div>
+                            <div class="maison-content">
+                                <p class="maison-details">Nettoyage spécialisé, restauration structurelle, retissage, consolidation, expertise et valorisation patrimoniale.</p>
+                                <p class="maison-positioning"><strong>Positionnement :</strong> Artisanat d'art, conservation patrimoniale, exigences muséales.</p>
+                                <a href="#galerie" class="maison-link">Découvrir les réalisations &rarr;</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -291,10 +343,10 @@
             <p class="section-intro">Depuis 2008, DEVOIRDECOURT sublime le cuir à travers des gestes précis : cirage, glaçage, patines et restauration.</p>
             <div class="galerie-grid galerie-grid-large">
                 <div class="galerie-item">
-                    <img src="images/DevoirDecourMedia/PicsArt_10-22-07.26.36.webp" alt="Glaçage soulier" loading="lazy">
+                    <img src="images/DevoirDecourMedia/PicsArt_11-14-02.26.13.webp" alt="Patine cuir - Image principale" loading="lazy">
                 </div>
                 <div class="galerie-item">
-                    <img src="images/DevoirDecourMedia/PicsArt_11-14-02.26.13.webp" alt="Patine cuir" loading="lazy">
+                    <img src="images/DevoirDecourMedia/PicsArt_10-22-07.26.36.webp" alt="Glaçage soulier" loading="lazy">
                 </div>
                 <div class="galerie-item">
                     <img src="images/DevoirDecourMedia/PicsArt_10-26-10.51.48.webp" alt="Cirage traditionnel" loading="lazy">
@@ -303,19 +355,16 @@
                     <img src="images/DevoirDecourMedia/PicsArt_11-25-06.03.00.webp" alt="Travail du cuir" loading="lazy">
                 </div>
                 <div class="galerie-item">
+                    <img src="images/DevoirDecourMedia/PicsArt_09-29-05.14.02.webp" alt="Soulier patiné" loading="lazy">
+                </div>
+                <div class="galerie-item">
                     <img src="images/DevoirDecourMedia/PicsArt_10-15-07.18.04.webp" alt="Soin des souliers" loading="lazy">
                 </div>
                 <div class="galerie-item">
                     <img src="images/DevoirDecourMedia/PicsArt_11-07-01.51.54.webp" alt="Finitions" loading="lazy">
                 </div>
                 <div class="galerie-item">
-                    <img src="images/DevoirDecourMedia/PicsArt_09-29-05.14.02.webp" alt="Soulier patiné" loading="lazy">
-                </div>
-                <div class="galerie-item">
                     <img src="images/DevoirDecourMedia/PicsArt_1440602384508.webp" alt="Travail artisanal cuir" loading="lazy">
-                </div>
-                <div class="galerie-item">
-                    <img src="images/DevoirDecourMedia/PicsArt_10-14-05.54.22.webp" alt="Détail cuir" loading="lazy">
                 </div>
             </div>
         </div>
@@ -332,6 +381,9 @@
                     <img src="images/ChevalierMedia/Chevalier-Conservation-624x700.webp" alt="Chevalier Conservation" loading="lazy">
                 </div>
                 <div class="galerie-item">
+                    <img src="images/ChevalierMedia/20130228_170701_11.webp" alt="Retissage" loading="lazy">
+                </div>
+                <div class="galerie-item">
                     <img src="images/ChevalierMedia/20130228_162810_2.webp" alt="Restauration tapis" loading="lazy">
                 </div>
                 <div class="galerie-item">
@@ -339,9 +391,6 @@
                 </div>
                 <div class="galerie-item">
                     <img src="images/ChevalierMedia/20130228_170516_10.webp" alt="Travail artisanal" loading="lazy">
-                </div>
-                <div class="galerie-item">
-                    <img src="images/ChevalierMedia/20130228_170701_11.webp" alt="Retissage" loading="lazy">
                 </div>
                 <div class="galerie-item">
                     <img src="images/ChevalierMedia/20130228_170957_13.webp" alt="Restauration tapisserie" loading="lazy">
@@ -577,6 +626,29 @@
             }
 
             lastScroll = currentScroll;
+        });
+
+        // Accordion for Maisons
+        const accordionItems = document.querySelectorAll('.maison-accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.maison-header');
+
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                accordionItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.maison-header').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                    header.setAttribute('aria-expanded', 'true');
+                }
+            });
         });
     </script>
 </body>
