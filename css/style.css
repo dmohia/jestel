@@ -325,26 +325,16 @@ strong {
 
 .pillar {
     text-align: center;
-    padding: var(--space-md);
-}
-
-.pillar-number {
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--color-gold);
-    opacity: 0.4;
-    margin-bottom: var(--space-sm);
-    line-height: 1;
+    padding: var(--space-sm) var(--space-md);
 }
 
 .pillar-title {
     font-family: var(--font-serif);
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
+    font-size: 1.25rem;
+    font-style: italic;
+    letter-spacing: 0.05em;
     margin-bottom: var(--space-sm);
-    color: var(--color-ivory);
+    color: var(--color-gold);
 }
 
 .pillar-text {
