@@ -552,9 +552,12 @@ strong {
     background-color: var(--color-black-soft);
 }
 
-.maisons-accordion {
+.section-maisons .container {
     max-width: 900px;
-    margin: 0 auto;
+}
+
+.maisons-accordion {
+    width: 100%;
 }
 
 .maison-accordion-item {
