@@ -1191,21 +1191,23 @@ strong {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--color-gray-dark);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-gray-dark);
     color: var(--color-ivory-soft);
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
 }
 
 .social-link:hover {
-    border-color: var(--color-gold);
-    color: var(--color-gold);
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    transform: translateY(-2px);
 }
 
 .social-link svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 
 .footer-bottom {
