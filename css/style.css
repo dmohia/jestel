@@ -624,21 +624,24 @@ strong {
 }
 
 .maison-accordion-item.active .maison-panel {
-    max-height: 600px;
+    max-height: 500px;
 }
 
 .maison-panel-inner {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 200px 1fr;
     gap: var(--space-lg);
-    padding-bottom: var(--space-lg);
+    padding: var(--space-md) 0 var(--space-lg);
+    align-items: center;
 }
 
 .maison-image {
-    aspect-ratio: 1;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     border-radius: 4px;
     background-color: var(--color-gray-dark);
+    flex-shrink: 0;
 }
 
 .maison-image img {
@@ -646,11 +649,6 @@ strong {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform var(--transition-slow);
-}
-
-.maison-accordion-item.active .maison-image img {
-    transform: scale(1);
 }
 
 .maison-content {
@@ -692,6 +690,8 @@ strong {
     }
 
     .maison-image {
+        width: 100%;
+        height: auto;
         aspect-ratio: 16/9;
     }
 
