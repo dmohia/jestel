@@ -1067,6 +1067,11 @@ strong {
     max-width: 300px;
     height: auto;
     margin: 0 auto;
+    display: block;
+}
+
+.galerie-logo-large {
+    max-width: 400px;
 }
 
 .section-galerie-chevalier .galerie-grid {
