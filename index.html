@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-dot"></div>
-
     <!-- Progress Bar -->
     <div class="progress-bar"></div>
 
@@ -641,60 +637,6 @@
 
         window.addEventListener('scroll', updateProgress);
 
-        // ========================================
-        // CUSTOM CURSOR
-        // ========================================
-        const cursor = document.querySelector('.cursor');
-        const cursorDot = document.querySelector('.cursor-dot');
-
-        // Check if not touch device
-        if (window.matchMedia('(hover: hover)').matches) {
-            let mouseX = 0, mouseY = 0;
-            let cursorX = 0, cursorY = 0;
-
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-                cursorDot.style.left = mouseX + 'px';
-                cursorDot.style.top = mouseY + 'px';
-            });
-
-            // Smooth cursor follow
-            const animateCursor = () => {
-                cursorX += (mouseX - cursorX) * 0.15;
-                cursorY += (mouseY - cursorY) * 0.15;
-                cursor.style.left = cursorX + 'px';
-                cursor.style.top = cursorY + 'px';
-                requestAnimationFrame(animateCursor);
-            };
-            animateCursor();
-
-            // Hover effect on interactive elements
-            const hoverTargets = document.querySelectorAll('a, button, .btn, .maison-card, .galerie-item, .temoignage-card, .pillar, .methode-item, .reference-logo, .social-link');
-
-            hoverTargets.forEach(target => {
-                target.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-                target.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-            });
-
-            // Click effect
-            document.addEventListener('mousedown', () => cursor.classList.add('clicking'));
-            document.addEventListener('mouseup', () => cursor.classList.remove('clicking'));
-
-            // Hide cursor when leaving window
-            document.addEventListener('mouseleave', () => {
-                cursor.style.opacity = '0';
-                cursorDot.style.opacity = '0';
-            });
-            document.addEventListener('mouseenter', () => {
-                cursor.style.opacity = '1';
-                cursorDot.style.opacity = '1';
-            });
-        } else {
-            // Hide custom cursor on touch devices
-            cursor.style.display = 'none';
-            cursorDot.style.display = 'none';
-        }
 
     </script>
 </body>
