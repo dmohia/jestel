@@ -44,12 +44,22 @@
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
-        <div class="hero-content">
+        <div class="hero-container">
+            <div class="hero-portrait">
+                <div class="hero-portrait-frame">
+                    <img src="images/Jeremy1.jpg" alt="Jérémy Estelrich" class="hero-img">
+                </div>
+                <div class="hero-portrait-accent"></div>
+            </div>
             <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="hero-name">Jérémy</span>
-                    <span class="hero-name">Estelrich</span>
-                </h1>
+                <div class="hero-title-group">
+                    <span class="hero-pre-title" data-i18n="hero.pretitle">Artisan & Conservateur</span>
+                    <h1 class="hero-name-main">
+                        <span class="name-first">Jérémy</span>
+                        <span class="name-last">Estelrich</span>
+                    </h1>
+                    <div class="hero-line"></div>
+                </div>
                 <p class="hero-tagline" data-i18n="hero.tagline">Matière, Geste & Conservation</p>
                 <p class="hero-intro" data-i18n="hero.intro">
                     Depuis 2008, je développe des savoir-faire d'exception autour du cuir, du textile et des matières précieuses.<br>
@@ -58,14 +68,16 @@
                 </p>
                 <div class="hero-cta">
                     <a href="#parcours" class="btn btn-primary" data-i18n="hero.cta1">Découvrir le parcours</a>
-                    <a href="#maisons" class="btn btn-secondary" data-i18n="hero.cta2">Explorer les maisons</a>
                     <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta3">Contacter</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/Jeremy1.jpg" alt="Jérémy Estelrich" class="hero-img">
-            </div>
         </div>
+        <a href="#vision" class="hero-scroll-hint">
+            <span data-i18n="hero.scroll">Défiler</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </a>
     </section>
 
     <!-- Pillars Section -->
@@ -622,7 +634,9 @@
                 'nav.methode': 'Méthode',
                 'nav.references': 'Références',
                 'nav.contact': 'Contact',
+                'hero.pretitle': 'Artisan & Conservateur',
                 'hero.tagline': 'Matière, Geste & Conservation',
+                'hero.scroll': 'Défiler',
                 'hero.intro': 'Depuis 2008, je développe des savoir-faire d\'exception autour du cuir, du textile et des matières précieuses.<br>Comprendre la matière. Maîtriser le geste.<br>Préserver le temps.',
                 'hero.cta1': 'Découvrir le parcours',
                 'hero.cta2': 'Explorer les maisons',
@@ -713,7 +727,9 @@
                 'nav.methode': 'Method',
                 'nav.references': 'References',
                 'nav.contact': 'Contact',
+                'hero.pretitle': 'Artisan & Conservator',
                 'hero.tagline': 'Material, Craft & Preservation',
+                'hero.scroll': 'Scroll',
                 'hero.intro': 'Since 2008, I have cultivated exceptional expertise in leather, textiles and precious materials.<br>Understanding the material. Mastering the craft.<br>Preserving legacy.',
                 'hero.cta1': 'Discover the journey',
                 'hero.cta2': 'Explore our houses',
@@ -804,7 +820,9 @@
                 'nav.methode': 'منهجنا',
                 'nav.references': 'شركاؤنا',
                 'nav.contact': 'تواصل معنا',
+                'hero.pretitle': 'حرفي ومحافظ على التراث',
                 'hero.tagline': 'إرث الحرفة والعناية بالتفاصيل',
+                'hero.scroll': 'تصفّح',
                 'hero.intro': 'منذ عام ٢٠٠٨، نكرّس خبرتنا الفرنسية العريقة لخدمة أرقى الجلود والمنسوجات والقطع الثمينة.<br>نفهم المادة. نتقن الصنعة.<br>نحافظ على الإرث.',
                 'hero.cta1': 'اكتشف مسيرتنا',
                 'hero.cta2': 'تعرّف على دورنا',
