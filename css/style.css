@@ -53,6 +53,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 18px;
+    scroll-snap-type: y proximity;
 }
 
 body {
@@ -348,6 +349,111 @@ strong {
    ======================================== */
 .section {
     padding: var(--space-2xl) 0;
+}
+
+/* Full-height sections with scroll snap */
+.section-snap {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ========================================
+   DISCOVER SECTION - Hidden by default
+   ======================================== */
+.discover-gate {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-black) 0%, var(--color-charcoal) 100%);
+    scroll-snap-align: start;
+}
+
+.discover-gate h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--color-ivory);
+    margin-bottom: var(--space-sm);
+}
+
+.discover-gate p {
+    color: var(--color-gray-warm);
+    margin-bottom: var(--space-lg);
+    max-width: 500px;
+}
+
+.btn-discover {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    background: transparent;
+    border: 1px solid var(--color-gold);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-discover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-gold);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: -1;
+}
+
+.btn-discover:hover {
+    color: var(--color-black);
+}
+
+.btn-discover:hover::before {
+    transform: translateY(0);
+}
+
+.btn-discover svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.btn-discover:hover svg {
+    transform: translateY(3px);
+}
+
+/* Hidden content area */
+.discover-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.6s ease 0.2s;
+}
+
+.discover-content.revealed {
+    max-height: none;
+    opacity: 1;
+}
+
+/* Hide gate when content is revealed */
+.discover-gate.hidden {
+    display: none;
 }
 
 .section-label {
@@ -758,9 +864,15 @@ strong {
     border-bottom: 1px solid var(--color-gray-dark);
 }
 
+.references-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+}
+
 .references-logos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
 }
 
@@ -918,10 +1030,43 @@ strong {
 }
 
 /* ========================================
+   GALERIE POUYANNE SECTION
+   ======================================== */
+.section-galerie-pouyanne {
+    background-color: var(--color-black);
+}
+
+.section-galerie-pouyanne .galerie-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.galerie-item-featured {
+    grid-row: span 2;
+    aspect-ratio: auto !important;
+}
+
+.galerie-item-featured img {
+    height: 100%;
+    min-height: 400px;
+}
+
+/* ========================================
    GALERIE CHEVALIER SECTION
    ======================================== */
 .section-galerie-chevalier {
     background-color: var(--color-charcoal);
+}
+
+.galerie-header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.galerie-logo {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .section-galerie-chevalier .galerie-grid {
