@@ -293,6 +293,14 @@
     <!-- Hidden Discover Content -->
     <div class="discover-content" id="discoverContent">
 
+        <!-- Close button -->
+        <button class="btn-collapse" id="collapseBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 15l-6-6-6 6"/>
+            </svg>
+            Refermer
+        </button>
+
         <!-- Galerie Section - POUYANNE -->
         <section class="section section-galerie section-galerie-pouyanne">
             <div class="container">
@@ -300,7 +308,7 @@
                     <img src="images/Pouyanne/20260522_140900_0000.webp" alt="Pouyanne 1903 - Archives historiques" class="galerie-logo galerie-logo-large">
                 </div>
                 <div class="galerie-grid reveal reveal-stagger">
-                    <div class="galerie-item galerie-item-featured">
+                    <div class="galerie-item">
                         <img src="images/Pouyanne/20260518_094218_0000.webp" alt="Devanture historique Pouyanne" loading="lazy">
                     </div>
                     <div class="galerie-item">
@@ -310,7 +318,7 @@
                         <img src="images/Pouyanne/20260518_094601_0000.webp" alt="Couture textile" loading="lazy">
                     </div>
                 </div>
-                <div class="video-wrapper" style="margin-top: var(--space-lg);">
+                <div class="video-wrapper" >
                     <video controls poster="images/Pouyanne/20260518_094218_0000.webp">
                         <source src="images/Pouyanne/pouyanne-video.mp4" type="video/mp4">
                     </video>
@@ -345,7 +353,7 @@
                         <img src="images/ChevalierMedia/20130228_171220_14.webp" alt="Détail restauration" loading="lazy">
                     </div>
                 </div>
-                <div class="video-wrapper" style="margin-top: var(--space-lg);">
+                <div class="video-wrapper" >
                     <video controls poster="images/ChevalierMedia/Chevalier-Conservation-624x700.webp">
                         <source src="images/ChevalierMedia/AQO_SykUqSr6VjPffbRTa7cMjIIycytEyjcyn_4j5Aubmc9gmyiIVcUOSvR3a5pGwlgiUtqSUXarbV4wipWBVw.mp4" type="video/mp4">
                     </video>
@@ -359,7 +367,7 @@
                 <span class="section-label reveal">DEVOIRDECOURT</span>
                 <h2 class="section-title reveal">L'art du cuir et du soulier</h2>
                 <p class="section-intro reveal">Cirage, glaçage, patines et restauration depuis 2008.</p>
-                <div class="galerie-grid galerie-grid-large reveal reveal-stagger">
+                <div class="galerie-grid reveal reveal-stagger">
                     <div class="galerie-item">
                         <img src="images/DevoirDecourMedia/PicsArt_11-14-02.26.13.webp" alt="Patine cuir" loading="lazy">
                     </div>
@@ -379,7 +387,7 @@
                         <img src="images/DevoirDecourMedia/PicsArt_10-15-07.18.04.webp" alt="Soin des souliers" loading="lazy">
                     </div>
                 </div>
-                <div class="video-wrapper" style="margin-top: var(--space-lg);">
+                <div class="video-wrapper" >
                     <video controls poster="images/DevoirDecourMedia/PicsArt_10-22-07.29.37.webp">
                         <source src="images/DevoirDecourMedia/ddc_small_ok.mp4" type="video/mp4">
                     </video>
@@ -573,6 +581,7 @@
         // DISCOVER BUTTON
         // ========================================
         const discoverBtn = document.getElementById('discoverBtn');
+        const collapseBtn = document.getElementById('collapseBtn');
         const discoverContent = document.getElementById('discoverContent');
         const discoverGate = document.querySelector('.discover-gate');
 
@@ -581,11 +590,20 @@
                 discoverContent.classList.add('revealed');
                 discoverGate.classList.add('hidden');
 
-                // Scroll to content smoothly
                 setTimeout(() => {
                     discoverContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Trigger reveal animations for newly visible content
                     setTimeout(revealOnScroll, 300);
+                }, 100);
+            });
+        }
+
+        if (collapseBtn && discoverContent) {
+            collapseBtn.addEventListener('click', () => {
+                discoverContent.classList.remove('revealed');
+                discoverGate.classList.remove('hidden');
+
+                setTimeout(() => {
+                    discoverGate.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }, 100);
             });
         }

@@ -457,6 +457,37 @@ strong {
     display: none;
 }
 
+/* Collapse button */
+.btn-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: var(--space-md);
+    background: var(--color-charcoal);
+    border: none;
+    border-bottom: 1px solid var(--color-gray-dark);
+    color: var(--color-ivory);
+    opacity: 0.6;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity var(--transition-base), background var(--transition-base);
+}
+
+.btn-collapse:hover {
+    opacity: 1;
+    background: var(--color-gray-dark);
+}
+
+.btn-collapse svg {
+    width: 16px;
+    height: 16px;
+}
+
 .section-label {
     display: block;
     font-size: 0.8rem;
@@ -936,26 +967,13 @@ strong {
 .galerie-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+    gap: var(--space-sm);
 }
 
 .galerie-item {
-    aspect-ratio: 1;
+    aspect-ratio: 4/3;
     overflow: hidden;
-    border-radius: 4px;
     background-color: var(--color-charcoal);
-}
-
-/* Variation de tailles pour plus de dynamisme */
-.galerie-grid-large .galerie-item:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 2;
-    aspect-ratio: 1;
-}
-
-.galerie-grid-large .galerie-item:nth-child(5) {
-    grid-column: span 2;
-    aspect-ratio: 2/1;
 }
 
 .galerie-placeholder {
@@ -996,11 +1014,9 @@ strong {
 }
 
 .video-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 8px;
+    max-width: 700px;
+    margin: var(--space-lg) auto 0;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .video-placeholder {
@@ -1048,21 +1064,6 @@ strong {
     background-color: var(--color-black);
 }
 
-.section-galerie-pouyanne .galerie-grid {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto auto;
-}
-
-.galerie-item-featured {
-    grid-row: span 2;
-    aspect-ratio: auto !important;
-}
-
-.galerie-item-featured img {
-    height: 100%;
-    min-height: 400px;
-}
-
 /* ========================================
    GALERIE CHEVALIER SECTION
    ======================================== */
@@ -1072,74 +1073,22 @@ strong {
 
 .galerie-header {
     text-align: center;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
 }
 
 .galerie-logo {
-    max-width: 300px;
+    max-width: 280px;
+    max-height: 200px;
     height: auto;
     margin: 0 auto;
     display: block;
+    object-fit: contain;
 }
 
-.galerie-logo-large {
-    max-width: 400px;
-}
-
-.section-galerie-chevalier .galerie-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* Featured item pour Chevalier */
-.section-galerie-chevalier .galerie-item:nth-child(1) {
-    grid-row: span 2;
-    aspect-ratio: auto;
-}
-
-.galerie-grid-large {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 1024px) {
-    .galerie-grid,
-    .galerie-grid-large {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-sm);
-    }
-
-    .galerie-grid-large .galerie-item:nth-child(1) {
-        grid-column: span 2;
-        grid-row: span 1;
-        aspect-ratio: 2/1;
-    }
-
-    .galerie-grid-large .galerie-item:nth-child(5) {
-        grid-column: span 1;
-        aspect-ratio: 1;
-    }
-
-    .section-galerie-chevalier .galerie-item:nth-child(1) {
-        grid-row: span 1;
-        aspect-ratio: 1;
-    }
-}
-
-@media (max-width: 600px) {
-    .galerie-grid,
-    .galerie-grid-large {
+@media (max-width: 768px) {
+    .galerie-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-xs);
-    }
-
-    .galerie-grid-large .galerie-item:nth-child(1),
-    .galerie-grid-large .galerie-item:nth-child(5) {
-        grid-column: span 1;
-        grid-row: span 1;
-        aspect-ratio: 1;
-    }
-
-    .section-galerie-chevalier .galerie-item:nth-child(1) {
-        grid-row: span 1;
     }
 
     .video-wrapper {
