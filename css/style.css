@@ -1292,8 +1292,12 @@ strong {
     margin-top: var(--space-sm);
 }
 
+.footer-contact {
+    text-align: center;
+}
+
 .footer-contact h3 {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -1303,8 +1307,9 @@ strong {
 
 .footer-contact address {
     font-style: normal;
-    font-size: 0.875rem;
-    color: var(--color-ivory-soft);
+    font-size: 1rem;
+    color: var(--color-ivory);
+    opacity: 0.8;
     margin-bottom: var(--space-md);
 }
 
@@ -1322,6 +1327,7 @@ strong {
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: var(--space-sm);
     margin-top: var(--space-md);
 }
