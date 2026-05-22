@@ -21,13 +21,18 @@
                 <span class="logo-monogram">JE</span>
                 <span class="logo-name">Jérémy Estelrich</span>
             </a>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ar">AR</button>
+            </div>
             <ul class="nav-links">
-                <li><a href="#vision">Vision</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#maisons">Maisons & Savoir-faire</a></li>
-                <li><a href="#methode">Méthode</a></li>
-                <li><a href="#references">Références</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#vision" data-i18n="nav.vision">Vision</a></li>
+                <li><a href="#parcours" data-i18n="nav.parcours">Parcours</a></li>
+                <li><a href="#maisons" data-i18n="nav.maisons">Maisons & Savoir-faire</a></li>
+                <li><a href="#methode" data-i18n="nav.methode">Méthode</a></li>
+                <li><a href="#references" data-i18n="nav.references">Références</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Menu">
                 <span></span>
@@ -45,16 +50,16 @@
                     <span class="hero-name">Jérémy</span>
                     <span class="hero-name">Estelrich</span>
                 </h1>
-                <p class="hero-tagline">Matière, Geste & Conservation</p>
-                <p class="hero-intro">
+                <p class="hero-tagline" data-i18n="hero.tagline">Matière, Geste & Conservation</p>
+                <p class="hero-intro" data-i18n="hero.intro">
                     Depuis 2008, je développe des savoir-faire d'exception autour du cuir, du textile et des matières précieuses.<br>
                     Comprendre la matière. Maîtriser le geste.<br>
                     Préserver le temps.
                 </p>
                 <div class="hero-cta">
-                    <a href="#parcours" class="btn btn-primary">Découvrir le parcours</a>
-                    <a href="#maisons" class="btn btn-secondary">Explorer les maisons</a>
-                    <a href="#contact" class="btn btn-secondary">Contacter</a>
+                    <a href="#parcours" class="btn btn-primary" data-i18n="hero.cta1">Découvrir le parcours</a>
+                    <a href="#maisons" class="btn btn-secondary" data-i18n="hero.cta2">Explorer les maisons</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.cta3">Contacter</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -68,20 +73,20 @@
         <div class="container">
             <div class="pillars-grid reveal reveal-stagger">
                 <div class="pillar">
-                    <h3 class="pillar-title">Comprendre</h3>
-                    <p class="pillar-text">Analyser chaque pièce avec précision pour en révéler les spécificités et les contraintes.</p>
+                    <h3 class="pillar-title" data-i18n="pillars.understand">Comprendre</h3>
+                    <p class="pillar-text" data-i18n="pillars.understand_desc">Analyser chaque pièce avec précision pour en révéler les spécificités et les contraintes.</p>
                 </div>
                 <div class="pillar">
-                    <h3 class="pillar-title">Maîtriser</h3>
-                    <p class="pillar-text">Mobiliser le geste juste et les savoir-faire adaptés, dans le respect de la matière et de son histoire.</p>
+                    <h3 class="pillar-title" data-i18n="pillars.master">Maîtriser</h3>
+                    <p class="pillar-text" data-i18n="pillars.master_desc">Mobiliser le geste juste et les savoir-faire adaptés, dans le respect de la matière et de son histoire.</p>
                 </div>
                 <div class="pillar">
-                    <h3 class="pillar-title">Préserver</h3>
-                    <p class="pillar-text">Prolonger la vie des pièces en conservant leur intégrité, leur esthétique et leur valeur.</p>
+                    <h3 class="pillar-title" data-i18n="pillars.preserve">Préserver</h3>
+                    <p class="pillar-text" data-i18n="pillars.preserve_desc">Prolonger la vie des pièces en conservant leur intégrité, leur esthétique et leur valeur.</p>
                 </div>
                 <div class="pillar">
-                    <h3 class="pillar-title">Transmettre</h3>
-                    <p class="pillar-text">Faire vivre les savoir-faire dans une logique d'excellence et de transmission.</p>
+                    <h3 class="pillar-title" data-i18n="pillars.transmit">Transmettre</h3>
+                    <p class="pillar-text" data-i18n="pillars.transmit_desc">Faire vivre les savoir-faire dans une logique d'excellence et de transmission.</p>
                 </div>
             </div>
         </div>
@@ -90,8 +95,8 @@
     <!-- Vision Section -->
     <section id="vision" class="section section-vision">
         <div class="container">
-            <span class="section-label reveal">Vision</span>
-            <h2 class="section-title reveal">Une exigence : intervenir sans trahir</h2>
+            <span class="section-label reveal" data-i18n="nav.vision">Vision</span>
+            <h2 class="section-title reveal" data-i18n="vision.title">Une exigence : intervenir sans trahir</h2>
             <div class="vision-content reveal">
                 <div class="vision-text">
                     <p class="lead">La matière porte une histoire.</p>
@@ -275,11 +280,11 @@
 
     <!-- Discover Gate -->
     <section id="galerie" class="discover-gate">
-        <span class="section-label">Réalisations</span>
-        <h2>Explorer les savoir-faire</h2>
-        <p>Découvrez les galeries, vidéos et témoignages de nos maisons.</p>
+        <span class="section-label" data-i18n="discover.label">Réalisations</span>
+        <h2 data-i18n="discover.title">Explorer les savoir-faire</h2>
+        <p data-i18n="discover.desc">Découvrez les galeries, vidéos et témoignages de nos maisons.</p>
         <button class="btn-discover" id="discoverBtn">
-            Explorer
+            <span data-i18n="discover.btn">Explorer</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 5v14M5 12l7 7 7-7"/>
             </svg>
@@ -294,7 +299,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 15l-6-6-6 6"/>
             </svg>
-            Refermer
+            <span data-i18n="discover.close">Refermer</span>
         </button>
 
         <!-- Galerie Section - POUYANNE -->
@@ -637,6 +642,128 @@
 
         window.addEventListener('scroll', updateProgress);
 
+
+        // ========================================
+        // TRANSLATIONS
+        // ========================================
+        const translations = {
+            fr: {
+                'nav.vision': 'Vision',
+                'nav.parcours': 'Parcours',
+                'nav.maisons': 'Maisons & Savoir-faire',
+                'nav.methode': 'Méthode',
+                'nav.references': 'Références',
+                'nav.contact': 'Contact',
+                'hero.tagline': 'Matière, Geste & Conservation',
+                'hero.intro': 'Depuis 2008, je développe des savoir-faire d\'exception autour du cuir, du textile et des matières précieuses.<br>Comprendre la matière. Maîtriser le geste.<br>Préserver le temps.',
+                'hero.cta1': 'Découvrir le parcours',
+                'hero.cta2': 'Explorer les maisons',
+                'hero.cta3': 'Contacter',
+                'pillars.understand': 'Comprendre',
+                'pillars.understand_desc': 'Analyser chaque pièce avec précision pour en révéler les spécificités et les contraintes.',
+                'pillars.master': 'Maîtriser',
+                'pillars.master_desc': 'Mobiliser le geste juste et les savoir-faire adaptés, dans le respect de la matière et de son histoire.',
+                'pillars.preserve': 'Préserver',
+                'pillars.preserve_desc': 'Prolonger la vie des pièces en conservant leur intégrité, leur esthétique et leur valeur.',
+                'pillars.transmit': 'Transmettre',
+                'pillars.transmit_desc': 'Faire vivre les savoir-faire dans une logique d\'excellence et de transmission.',
+                'vision.title': 'Une exigence : intervenir sans trahir',
+                'discover.label': 'Réalisations',
+                'discover.title': 'Explorer les savoir-faire',
+                'discover.desc': 'Découvrez les galeries, vidéos et témoignages de nos maisons.',
+                'discover.btn': 'Explorer',
+                'discover.close': 'Refermer'
+            },
+            en: {
+                'nav.vision': 'Vision',
+                'nav.parcours': 'Journey',
+                'nav.maisons': 'Houses & Craftsmanship',
+                'nav.methode': 'Method',
+                'nav.references': 'References',
+                'nav.contact': 'Contact',
+                'hero.tagline': 'Material, Gesture & Conservation',
+                'hero.intro': 'Since 2008, I have been developing exceptional craftsmanship around leather, textiles and precious materials.<br>Understanding the material. Mastering the gesture.<br>Preserving time.',
+                'hero.cta1': 'Discover the journey',
+                'hero.cta2': 'Explore the houses',
+                'hero.cta3': 'Contact',
+                'pillars.understand': 'Understand',
+                'pillars.understand_desc': 'Analyze each piece with precision to reveal its specificities and constraints.',
+                'pillars.master': 'Master',
+                'pillars.master_desc': 'Apply the right gesture and appropriate expertise, respecting the material and its history.',
+                'pillars.preserve': 'Preserve',
+                'pillars.preserve_desc': 'Extend the life of pieces while maintaining their integrity, aesthetics and value.',
+                'pillars.transmit': 'Transmit',
+                'pillars.transmit_desc': 'Keep craftsmanship alive through excellence and transmission.',
+                'vision.title': 'One requirement: intervene without betraying',
+                'discover.label': 'Achievements',
+                'discover.title': 'Explore the craftsmanship',
+                'discover.desc': 'Discover galleries, videos and testimonials from our houses.',
+                'discover.btn': 'Explore',
+                'discover.close': 'Close'
+            },
+            ar: {
+                'nav.vision': 'الرؤية',
+                'nav.parcours': 'المسيرة',
+                'nav.maisons': 'الدور والحرف',
+                'nav.methode': 'المنهج',
+                'nav.references': 'المراجع',
+                'nav.contact': 'اتصل بنا',
+                'hero.tagline': 'المادة، الحركة والحفظ',
+                'hero.intro': 'منذ عام 2008، أطور حرفاً استثنائية حول الجلود والمنسوجات والمواد الثمينة.<br>فهم المادة. إتقان الحركة.<br>الحفاظ على الزمن.',
+                'hero.cta1': 'اكتشف المسيرة',
+                'hero.cta2': 'استكشف الدور',
+                'hero.cta3': 'تواصل معنا',
+                'pillars.understand': 'الفهم',
+                'pillars.understand_desc': 'تحليل كل قطعة بدقة للكشف عن خصائصها وقيودها.',
+                'pillars.master': 'الإتقان',
+                'pillars.master_desc': 'تطبيق الحركة الصحيحة والخبرة المناسبة، مع احترام المادة وتاريخها.',
+                'pillars.preserve': 'الحفظ',
+                'pillars.preserve_desc': 'إطالة عمر القطع مع الحفاظ على سلامتها وجمالها وقيمتها.',
+                'pillars.transmit': 'التوريث',
+                'pillars.transmit_desc': 'إبقاء الحرف حية من خلال التميز والتوريث.',
+                'vision.title': 'مطلب واحد: التدخل دون خيانة',
+                'discover.label': 'الإنجازات',
+                'discover.title': 'استكشف الحرف',
+                'discover.desc': 'اكتشف المعارض والفيديوهات والشهادات من دورنا.',
+                'discover.btn': 'استكشف',
+                'discover.close': 'إغلاق'
+            }
+        };
+
+        let currentLang = 'fr';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Store preference
+            localStorage.setItem('lang', lang);
+        }
+
+        // Language switcher
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+        });
+
+        // Load saved language or default
+        const savedLang = localStorage.getItem('lang');
+        if (savedLang && translations[savedLang]) {
+            setLanguage(savedLang);
+        }
 
     </script>
 </body>

@@ -193,6 +193,44 @@ strong {
     color: var(--color-ivory);
 }
 
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    gap: 2px;
+    margin-right: var(--space-md);
+}
+
+.lang-btn {
+    padding: 0.4rem 0.6rem;
+    background: transparent;
+    border: 1px solid var(--color-gray-dark);
+    color: var(--color-gray-warm);
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.lang-btn:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.lang-btn:last-child {
+    border-radius: 0 3px 3px 0;
+}
+
+.lang-btn:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.lang-btn.active {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: var(--color-black);
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -1748,6 +1786,62 @@ body::before {
     height: 60px;
     background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
     opacity: 0.5;
+}
+
+/* RTL Support (Arabic) */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .nav {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-content {
+    direction: rtl;
+}
+
+[dir="rtl"] .timeline {
+    padding-left: 0;
+    padding-right: var(--space-lg);
+}
+
+[dir="rtl"] .timeline::before {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .timeline-item::before {
+    left: auto;
+    right: calc(-1 * var(--space-lg));
+    transform: translateX(3.5px);
+}
+
+[dir="rtl"] .vision-principles {
+    padding-left: 0;
+    padding-right: var(--space-md);
+    border-left: none;
+    border-right: 2px solid var(--color-gold);
+}
+
+[dir="rtl"] .temoignage-card {
+    border-left: none;
+    border-right: 2px solid var(--color-gold);
+}
+
+[dir="rtl"] .timeline-quote {
+    padding-left: 0;
+    padding-right: var(--space-md);
+    border-left: none;
+    border-right: 2px solid var(--color-gold);
+}
+
+[dir="rtl"] .footer-grid {
+    direction: rtl;
 }
 
 /* Print Styles */
