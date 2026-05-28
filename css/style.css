@@ -147,13 +147,15 @@ strong {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: transparent;
-    transition: background-color var(--transition-base);
+    background-color: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 169, 98, 0.1);
+    transition: all var(--transition-base);
 }
 
 .header.scrolled {
     background-color: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
+    border-bottom-color: rgba(201, 169, 98, 0.15);
 }
 
 .nav {
@@ -163,13 +165,14 @@ strong {
     height: var(--header-height);
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-lg);
 }
 
 .logo {
     font-family: var(--font-serif);
-    font-size: 1rem;
-    letter-spacing: 0.08em;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
     color: var(--color-ivory);
     transition: color var(--transition-fast);
 }
@@ -181,38 +184,55 @@ strong {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: var(--space-lg);
+    gap: 3rem;
     list-style: none;
 }
 
 .nav-links a {
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
+    position: relative;
+    font-family: var(--font-serif);
+    font-size: 0.85rem;
     font-weight: 400;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--color-gray-warm);
+    letter-spacing: 0.06em;
+    color: var(--color-ivory-soft);
     transition: color var(--transition-fast);
 }
 
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-gold);
+    transition: width var(--transition-base);
+}
+
 .nav-links a:hover {
-    color: var(--color-ivory);
+    color: var(--color-gold);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Language Switcher */
 .lang-switcher {
     display: flex;
-    gap: var(--space-sm);
+    align-items: center;
+    gap: 0.8rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(201, 169, 98, 0.2);
 }
 
 .lang-btn {
     padding: 0;
     background: transparent;
     border: none;
-    color: var(--color-gray);
-    font-family: var(--font-sans);
-    font-size: 0.65rem;
-    letter-spacing: 0.05em;
+    color: var(--color-gray-warm);
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
     cursor: pointer;
     transition: color var(--transition-fast);
 }
