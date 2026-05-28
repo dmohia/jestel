@@ -310,10 +310,17 @@
         <!-- Galerie Section - CHEVALIER -->
         <section class="section section-galerie section-galerie-chevalier">
             <div class="container">
-                <div class="galerie-header reveal">
-                    <img src="images/ChevalierMedia/Design_sans_titre_20260518_094315_0000.webp" alt="Chevalier Conservation" class="galerie-logo">
+                <div class="galerie-hero reveal">
+                    <div class="galerie-hero-image">
+                        <img src="images/ChevalierMedia/Design_sans_titre_20260518_094315_0000.webp" alt="Chevalier Conservation">
+                    </div>
+                    <div class="galerie-hero-content">
+                        <span class="section-label" data-i18n="maisons.chev.label">Conservation & Patrimoine</span>
+                        <h2 class="galerie-title" data-i18n="maisons.chev.name">Chevalier Conservation</h2>
+                        <p class="galerie-tagline" data-i18n="galerie.chev.intro">Conservation textile et tapis d'exception depuis 1917.</p>
+                        <div class="galerie-line"></div>
+                    </div>
                 </div>
-                <p class="section-intro reveal" data-i18n="galerie.chev.intro">Conservation textile et tapis d'exception depuis 1917.</p>
                 <div class="galerie-grid reveal reveal-stagger">
                     <div class="galerie-item">
                         <img src="images/ChevalierMedia/20130228_170701_11.webp" alt="Retissage" loading="lazy">
@@ -343,11 +350,19 @@
         </section>
 
         <!-- Galerie Section - DEVOIRDECOURT -->
-        <section class="section section-galerie">
+        <section class="section section-galerie section-galerie-ddc">
             <div class="container">
-                <span class="section-label reveal">DEVOIRDECOURT</span>
-                <h2 class="section-title reveal" data-i18n="galerie.ddc.title">L'art du cuir et du soulier</h2>
-                <p class="section-intro reveal" data-i18n="galerie.ddc.intro">Cirage, glaçage, patines et restauration depuis 2008.</p>
+                <div class="galerie-hero reveal">
+                    <div class="galerie-hero-image">
+                        <img src="images/DevoirDecourMedia/VALIDEE-Rosewood-Paris-16.webp" alt="Devoirdecourt">
+                    </div>
+                    <div class="galerie-hero-content">
+                        <span class="section-label" data-i18n="maisons.ddc.label">Cuir & Souliers</span>
+                        <h2 class="galerie-title">DEVOIRDECOURT</h2>
+                        <p class="galerie-tagline" data-i18n="galerie.ddc.intro">Cirage, glaçage, patines et restauration depuis 2008.</p>
+                        <div class="galerie-line"></div>
+                    </div>
+                </div>
                 <div class="galerie-grid reveal reveal-stagger">
                     <div class="galerie-item">
                         <img src="images/DevoirDecourMedia/PicsArt_11-14-02.26.13.webp" alt="Patine cuir" loading="lazy">
@@ -586,6 +601,21 @@
                 }, 100);
             });
         }
+
+        // Handle nav clicks to #galerie - open discover content
+        document.querySelectorAll('a[href="#galerie"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (discoverContent && discoverGate) {
+                    discoverContent.classList.add('revealed');
+                    discoverGate.classList.add('hidden');
+                    setTimeout(() => {
+                        discoverContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        setTimeout(revealOnScroll, 300);
+                    }, 100);
+                }
+            });
+        });
 
         // ========================================
         // SCROLL REVEAL
