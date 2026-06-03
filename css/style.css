@@ -934,6 +934,7 @@ strong {
 }
 
 .maison-card:hover .maison-image img {
+    transform: scale(1.05);
     filter: grayscale(0%);
 }
 
