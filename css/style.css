@@ -1421,7 +1421,35 @@ strong {
     font-style: italic;
     color: var(--color-ivory);
     opacity: 0.7;
+    margin-bottom: var(--space-sm);
+}
+
+.galerie-link {
     margin-bottom: var(--space-md);
+}
+
+.galerie-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    color: var(--color-gold);
+    transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.galerie-link a:hover {
+    color: var(--color-gold-light);
+    gap: 0.75rem;
+}
+
+.galerie-link a::after {
+    content: '→';
+    transition: transform var(--transition-fast);
+}
+
+.galerie-link a:hover::after {
+    transform: translateX(3px);
 }
 
 .galerie-line {
